@@ -27,7 +27,7 @@ function renderItems(items, containerSelector, itemTemplate) {
 document.addEventListener('DOMContentLoaded', async () => {
    try {
       // 2-3. 모든 데이터를 서버에서 단 한 번만 가져옵니다.
-      const response = await fetch('../assets/data/netData.json');
+      const response = await fetch('./assets/data/netData.json');
       if (!response.ok) throw new Error('데이터 불러오기 실패');
       const data = await response.json();
 
