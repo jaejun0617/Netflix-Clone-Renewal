@@ -917,7 +917,7 @@ footer p {
       text-align: center;
       /* border: 1px solid red; */
    }
-   .classic_container {
+   .classic_container, .category_container {
       padding: 100px 1rem;
    }
    
