@@ -204,3 +204,22 @@ function setupCategoryTabs(allCategoryData) {
    // 4-6. 최초 실행
    displayCategoryContent('all');
 }
+// 햄버거 메뉴
+
+const mobileBtn = document.querySelector('.hamburger_btn');
+const headerMenu = document.querySelector('nav ul');
+
+mobileBtn.addEventListener('click', () => {
+   // 메뉴(ul)와 버튼 자신에게 active 클래스를 토글(toggle)
+   headerMenu.classList.toggle('active');
+   mobileBtn.classList.toggle('active');
+
+   // [추가] 접근성을 위한 aria-label 변경
+   const isOpened = mobileBtn.classList.contains('active');
+   if (isOpened) {
+      mobileBtn.setAttribute('aria-label', '메뉴 닫기');
+   } else {
+      mobileBtn.setAttribute('aria-label', '메뉴 열기');
+   }
+});
+
